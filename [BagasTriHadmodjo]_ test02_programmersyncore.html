@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Test 2 - Programmer Syncore</title>
+	<style>
+		body {
+			font-size: 16px;
+			font-family: Verdana;
+			margin-left: 25px;
+			background-color: lightgrey;
+		}
+	</style>
+</head>
+<body>
+
+	<p>1. Menampilkan data member yang berada pada provinsi sumatera utara dan dalam satu kabupaten</p>
+	<p>Jawab: SELECT * FROM mst_member WHERE id_provinsi=12 AND id_kabupaten </p><br>
+
+	<p>2. Menampilkan data provinsi yang tidak ada dalam data member</p>
+	<p>Jawab: SELECT DISTINCT id_provinsi FROM mst_provinsi WHERE id_provinsi NOT IN (SELECT DISTINCT id_provinsi FROM mst_member);
+ </p><br>
+
+	<p>3. Menampilkan data kabupaten yang tidak ada dalam data member</p>
+	<p>Jawab: SELECT DISTINCT id_kabupaten FROM mst_kabupaten WHERE id_kabupaten NOT IN (SELECT DISTINCT id_kabupaten FROM mst_member);</p><br>
+
+	<p>4. Menampilkan data kecamatan yang tidak ada dalam data member</p>
+	<p>Jawab: SELECT DISTINCT id_kecamatan FROM mst_kecamatan WHERE id_kecamatan NOT IN (SELECT DISTINCT id_kecamatan FROM mst_member);</p><br>
+
+	<p>5. Menampilkan nama member yang terdapat di Kab. Simalungun</p>
+	<p>Jawab: SELECT nama FROM mst_member WHERE id_kabupaten = 354;</p><br>
+
+	<p>6. Menampilkan jumlah data instansi pada Kab. Bireuen dan Kab. Bener Meriah</p>
+	<p>Jawab: </p><br>
+
+	<p>7. Menampilkan data member yang berawalan huruf “M”</p>
+	<p>Jawab: SELECT * FROM mst_member WHERE nama LIKE 'M%';</p><br>
+
+	<p>8. Menampilkan alamat email yang mempunyai karakter “no” dan terdapat di provinsi Sumatera Utara</p>
+	<p>Jawab: </p><br>
+	
+	<p>9. Menampilkan data member yang mempunyai kode instansi “2004”</p>
+	<p>Jawab: </p><br>
+	
+	<p>10. Menampilkan data member yang mempunyai karakter kode kecamatan “.08.”</p>
+	<p>Jawab: </p><br>
+
+</body>
+</html>
